@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder</title>
+    <title>HTML/CSS: Beyond the Basics &hearts; Girl Develop It RDU</title>
 
     <meta name="description" content="">
     <meta name="author" content="Cara Jo Miller, adapted by Lisa Smith">
@@ -1487,7 +1487,195 @@ background-image: linear-gradient(bottom right, red, white);
             <p>Hint: The transforms, like transitions, will only work if the element has a pseudo class, like :hover</p>
             <p>Extra Credit: Use it with transition to make the transform smoother.</p>
         </section>
-
+        <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Flexbox</h2>
+            </section>
+        <section>
+             <h2>What is it!?</h2>
+          <p>A layout method that gives the container the ability to alter its items' width/height (and order) to best fill the available space</p>
+        </section>
+        <section>
+             <h2>Container and children</h2>
+          <p>We'll be applying styling to the containing element as well as its children, called items</p>
+        </section>
+        <section>
+             <h2>Make a container (HTML)</h2>
+             <pre><code>
+             	&lt;div class="flex-container">
+             		[my content]
+             	&lt;/div>
+             </code></pre>
+          	 <p>Make a container.</p>
+        </section>
+        <section>
+             <h2>Add some chidren (HTML)</h2>
+             <pre><code>
+             	<div class="flex-container">
+             		<div class="flex-item">item 1</div>
+             		<div class="flex-item">item 2</div>
+             		<div class="flex-item">item 3</div>
+             	</div>
+             </code></pre>
+          	 <p>Hi, kids!</p>
+        </section>
+        <section>
+             <h2>One line of styling (CSS)</h2>
+             <pre><code>
+             	.flex-container {
+             		display: flex;
+             	}
+             </code></pre>
+        </section>
+        <section>
+             <h2>DONE</h2>
+             	<div class="flex-container">
+             		<div class="flex-item">item 1</div>
+             		<div class="flex-item">item 2</div>
+             		<div class="flex-item">item 3</div>
+             	</div>
+          	 <p>So much flexy, so little code.</p>
+        </section>
+         <section>
+             <h2>Other Container Properties</h2>
+          	 <ul>
+          	 	<li>flex-direction</li>
+          	 	<li>flex-wrap</li>
+          	 	<li>justify-content</li>
+          	 	<li>align-items</li>
+          	 	<li>align-content</li>
+          	 </ul>
+        </section>
+        <section>
+             <h2>Flex-direction</h2>
+             	<pre><code>
+             	.flex-container {
+             		display: flex;
+             		flex-direction: row; 
+             	}
+             </code></pre>
+          	 <p>Controls the direction of the items in the container.</p>
+          	 <p>Options:row | row-reverse | column | column-reverse.</p>
+        </section>
+        <section>
+             <h2>Flex-wrap</h2>
+             	<pre><code>
+             	.flex-container {
+             		display: flex;
+             		flex-direction: row; 
+             		flex-wrap: nowrap;
+             	}
+             </code></pre>
+          	 <p>Controls whether or not items stay on one row or break to multiple rows.</p>
+          	 <p>Options: nowrap | wrap | wrap-reverse</p>
+        </section>
+        <section>
+             <h2>Justify-content</h2>
+             	<pre><code>
+             	.flex-container {
+             		display: flex;
+             		flex-direction: row; 
+             		flex-wrap: nowrap;
+             		justify-content: flex-start;
+             	}
+             </code></pre>
+          	 <p>Defines the alignment of items within the container and distributes the space betwen items.</p>
+          	 <p>Options: flex-start | flex-end | center | space-between | space-around</p>
+        </section>
+        <section>
+             <h2>Align-items</h2>
+             	<pre><code>
+             	.flex-container {
+             		display: flex;
+             		flex-direction: row; 
+             		flex-wrap: nowrap;
+             		justify-content: flex-start;
+             		align-items: flex-start;
+             	}
+             </code></pre>
+          	 <p>Defines the cross-axis alignment of items on the current line.</p>
+          	 <p>Options: flex-start | flex-end | center | stretch | baseline</p>
+        </section>
+        <section>
+             <h2>Align-content</h2>
+             	<pre><code>
+             	.flex-container {
+             		display: flex;
+             		flex-direction: row; 
+             		flex-wrap: nowrap;
+             		justify-content: flex-start;
+             		align-items: flex-start;
+             		align-content: flex-start;
+             	}
+             </code></pre>
+          	 <p>Defines the space between multiple lines.</p>
+          	 <p>Options: flex-start | flex-end | center | stretch | space-between | space-around</p>
+        </section>
+        <section>
+             <h2>Child Properties</h2>
+          	 <ul>
+          	 	<li>order</li>
+          	 	<li>flex-grow</li>
+          	 	<li>flex-shrink</li>
+          	 	<li>flex-basis</li>
+          	 	<li>flex (shorthand)</li>
+          	 </ul>
+        </section>
+        <section>
+             <h2>Order</h2>
+             	<pre><code>
+             	.flex-item {
+             		order: 1;
+             	}
+             </code></pre>
+          	 <p>Sets the order of items within the container.</p>
+        </section>
+        <section>
+             <h2>Flex-grow</h2>
+             	<pre><code>
+             	.flex-item {
+             		flex-grow: 1;
+             	}
+             </code></pre>
+          	 <p>Defines the ability for the item to grow if necessary.</p>
+        </section>
+        <section>
+             <h2>Flex-shrink</h2>
+             	<pre><code>
+             	.flex-item {
+             		flex-shrink: 1;
+             	}
+             </code></pre>
+          	 <p>Defines the ability for the item to shrink if necessary.</p>
+        </section>
+        <section>
+             <h2>Flex-basis</h2>
+             	<pre><code>
+             	.flex-item {
+             		flex-basis: 1;
+             	}
+             </code></pre>
+          	 <p>Defines the default size of an element before the remaining space is distributed.</p>
+          	 <p>Options: &lt;integer> | auto </p>          	 
+        </section>
+        <section>
+             <h2>Flex</h2>
+             	<pre><code>
+             	.flex-item {
+             		flex: 0 1 auto;
+             	}
+             </code></pre>
+          	 <p>Shorthand for flex-grow, flex-shrink and flex-basis combined.</p>
+        </section>
+        <section>
+             <h2>Align-self</h2>
+             	<pre><code>
+             	.flex-item {
+             		align-self: auto;
+             	}
+             </code></pre>
+          	 <p>Allows the default alignment of the item to be overriden.</p>
+          	 <p>Options: auto | flex-start | flex-end | center | baseline | stretch </p>          	 
+        </section>
         <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">Responsive Web Design (RWD)</h2>
             </section>

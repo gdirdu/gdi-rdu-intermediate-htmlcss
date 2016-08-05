@@ -948,3 +948,24 @@ article.transform-origin .example3 {
     background-color: blue;
   }
 }
+/******************************
+* Class 3 Flexbox
+*******************************/
+/* line 1530, source/slides.css */
+.flex-container {
+  display: flex!important;
+  border: 1px solid red!important;
+  margin: 20px!important;
+}
+.flex-item {
+  width: 33%;
+  background-color: blue!important;
+  color:white;
+  margin: 10px 5px!important;
+}
+.flex-item:first-of-type {
+  margin-left: 10px!important;
+}
+.flex-item:last-of-type {
+  margin-right: 10px!important;
+}
